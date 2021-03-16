@@ -25,14 +25,14 @@ public class TestingGround {
         System.out.println(example.equals(example1));
 
         //запускаем отсчет времени, вычисляем значение x перебором
-        System.nanoTime();
+        long startTime =  System.nanoTime();
 
         for (int i = 0; i < 20; i++) {
             if (i == x) {
                 System.out.println("Значение x = " + i + ", мы узнали это методом перебора");
             }
-        }
-        System.out.println("На вычисление ушло " + System.nanoTime() + " единиц времени");
+        } long endTime = System.nanoTime();
+        System.out.println("На вычисление ушло " + (endTime - startTime) + " единиц времени");
 
     }
 }
