@@ -8,7 +8,6 @@ public class JavaAlgorithm_4 {
 
         long startTime = System.nanoTime();
         long endTime = System.nanoTime();
-        System.out.println("На выполнение задания 3.2 ушло " + (endTime - startTime) + " единиц времени");
 
         //стэковый блок
         Stack<ArrayObject> stackObject = new Stack<>();
