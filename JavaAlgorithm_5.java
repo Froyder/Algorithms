@@ -6,7 +6,8 @@ import java.util.Random;
 public class JavaAlgorithm_5 {
 
     public static void main(String[] args) {
-
+    
+        //методы для рассчета времени выполнения расчетов 
         long startTime = System.nanoTime();
         long endTime = System.nanoTime();
         System.out.println("На выполнение расчетов ушло " + (endTime - startTime) + " единиц времени");
@@ -15,14 +16,14 @@ public class JavaAlgorithm_5 {
         int n = 10;
         countdown(n);
 
-        //рекурсивный бинарный поиск (5.5)
+        //рекурсивный бинарный поиск 
         int [] arr = new int []{5, 3, 4, 7, 9, 2, 1};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
 
         System.out.println(recBinaryFind (4, 0, arr.length-1, arr));
 
-        //поиск методом слияния (5.6)
+        //поиск методом слияния 
         int [] arr2 = new int [10];
         Random rand = new Random();
 
@@ -34,13 +35,13 @@ public class JavaAlgorithm_5 {
 
     }
 
-    //пример бесконечной рекурсии (5.2)
+    //пример бесконечной рекурсии 
     public static int countdownEndless (int n) {
         System.out.println(n);
         return (countdown(n-1));
     }
 
-    //правильная рекурсия (5.2)
+    // рекурсия с условием выхода 
     public static int countdown (int n) {
         System.out.println(n);
         if (n == 0) {
@@ -50,7 +51,7 @@ public class JavaAlgorithm_5 {
 
     }
 
-    //рекурсивный бинарный поиск (5.5)
+    //рекурсивный бинарный поиск 
     public static int recBinaryFind (int searchKey, int low, int high, int [] arr) {
         if (low > high)
             return arr.length;
@@ -66,7 +67,7 @@ public class JavaAlgorithm_5 {
             return (recBinaryFind(searchKey, low,high - 1, arr));
     }
 
-    //метод слияния (5.6)
+    //метод слияния 
     private static int [] sortMerge (int [] arr) {
         int len = arr.length;
         if (len < 2 ) return arr;
